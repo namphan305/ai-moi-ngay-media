@@ -1,0 +1,17 @@
+<!doctype html><html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kết nối TikTok</title><link rel="stylesheet" href="../style.css"></head><body><main>
+<h1>Kết nối TikTok</h1>
+<div id="ok" hidden><p>Đã cấp quyền. Bấm "Chép mã" rồi nhắn Claude "đã chép mã" (mã dùng một lần, hết hạn sau vài phút):</p>
+<code id="code"></code><button id="b">Chép mã</button></div>
+<p id="err" hidden></p>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.get("code")) {
+  document.getElementById("code").textContent = q.get("code");
+  document.getElementById("ok").hidden = false;
+  document.getElementById("b").onclick = e => navigator.clipboard.writeText(q.get("code")).then(() => e.target.textContent = "Đã chép");
+} else {
+  const e = document.getElementById("err"); e.hidden = false;
+  e.textContent = q.get("error") ? "TikTok báo lỗi: " + q.get("error") + " " + (q.get("error_description") || "") : "Chưa có mã. Mở lại link cấp quyền.";
+}
+</script></main></body></html>
