@@ -3,3 +3,20 @@ body{background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,
 main{max-width:720px;margin:0 auto}h1{font-size:28px}h2{font-size:20px;margin-top:28px}a{color:var(--acc)}small{color:var(--mut)}
 code{background:#1e2048;padding:8px 12px;border-radius:8px;display:block;word-break:break-all;font-size:18px}
 button{background:var(--acc);border:0;border-radius:8px;padding:10px 18px;font-size:16px;margin-top:12px;cursor:pointer}
+/* trang chủ */
+.home{padding:0}.home main{max-width:960px;padding:0 16px 32px}
+.top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;max-width:960px;margin:0 auto;padding:16px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font-weight:700;font-size:18px}.brand img{border-radius:50%}
+.top nav a{margin-left:16px;color:var(--mut);text-decoration:none}.top nav a:hover{color:var(--fg)}
+.hero{display:flex;gap:28px;align-items:center;padding:32px 0 8px}.hero img{border-radius:50%;flex:none}
+.hero h1{font-size:34px;line-height:1.2;margin:0 0 12px}.lead{font-size:18px;color:var(--mut)}
+.btn{display:inline-block;background:var(--acc);color:#0f1126;padding:10px 18px;border-radius:10px;text-decoration:none;font-weight:600;margin:6px 8px 0 0}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid #3a3f6e}
+section{margin-top:36px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{background:#1b2044;border-radius:14px;padding:16px;color:var(--fg)}.card p{margin:6px 0 0;color:var(--mut)}
+.card.link{text-decoration:none}.card.link:hover{outline:1px solid var(--acc)}
+.tips{list-style:none;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tips a{display:block;background:#1b2044;border-radius:12px;padding:12px 14px;color:var(--fg);text-decoration:none}
+.tips span{color:#e9c46a;font-weight:700;margin-right:8px}.steps li{margin:6px 0}
+footer{max-width:960px;margin:24px auto 0;padding:16px;border-top:1px solid #262a52;color:var(--mut)}
+@media (max-width:700px){.hero{flex-direction:column;text-align:center}.grid3,.tips{grid-template-columns:1fr}.top nav a{margin:0 12px 0 0}}
